@@ -51,12 +51,14 @@
   
     var counter = 1;
     
-    while { (counter < howMany);
-  
-    console.log("Wheee! This is the + counter + time we've done this!"); 
-      counter++;
-        }
+    while (counter < howMany){
       
+      console.log("Wheee! This is the + counter + time we've done this!"); 
+      
+      counter++;
+      
+    }
+  
       var theOne = counter % imageSources.length;
     
       theImg.setAttribute("src", imageSources[theOne]);
@@ -64,7 +66,6 @@
       // TODO: increment the counter
     
     setTimeout(nextImage, 2);
-    }
 
 
   </script>

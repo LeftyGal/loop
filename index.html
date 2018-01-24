@@ -6,28 +6,39 @@
     
     <meta charset="utf-8">
   
-  <title>Loop the Loop</title>
+    <title>Loop the Loop</title>
   
-  <style type="text/css">
-    body {
+    <style type="text/css">
+    
+      body {
       font-family: sans-serif;
+      text-shadow: 3px 2px blue;
     }
     img {
       max-width: 100%;
+      border: 10px solid yellow;
+      outline-style: solid;
+      outline-color: red;
+      outline-width: 4px;
     }
     .red {
       color: red;
     }
+      
+    
   </style>
-</head>
+
+  </head>
 
   <body onload="changeBackground('gray');">
   
     <h1 id="h1">Whee!</h1>
   
   <script>
-  function changeBackground(color){
-    document.body.style.background = color;
+  
+    function changeBackground(color){
+    
+      document.body.style.background = color;
   }
 
     document.getElementById("h1").style.color = "red" ;
@@ -46,32 +57,41 @@
 
     // select the <img> tag with id of "roller" from the HTML
     var theImg = document.querySelector("img#roller");
-
     // set the src attribute of the img to be the first element in source array
     theImg.setAttribute("src", imageSources[0]);
-
     // TODO: set howMany variable to a value user inputs
+    
     var howMany = prompt("How many rides would you like to go on?");
   
     var counter = 1;
+    
     var loop = function(){
-        while(counter<howMany){
+        
+      while(counter<howMany){
       
       console.log("Wheee! This is the + counter + time we've done this!"); 
-      counter += 1;
-      
+     
+        console.log("I'm looping,literally!");
+        counter += 1; 
+        
+        alert ("Slow down you will miss it");   
     }
     };
+    
     loop ();
-      var theOne = counter % imageSources.length;
+    
+      theImg.setAttribute("src", imageSources[theOne]);
+          
+    var theOne = counter % imageSources.length;
     
       theImg.setAttribute("src", imageSources[theOne]);
 
       // TODO: increment the counter
     
-    setTimeout(nextImage, 2);
+    setTimeout(howMany, 2);
 
   </script>
 
 </body>
+
 </html>

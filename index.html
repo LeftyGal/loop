@@ -67,14 +67,15 @@
     
     var loop = function(){
         
-      while(counter<howMany){
+      while(counter < howMany){
+        console.log(counter)
       
-      console.log("Wheee! This is the + counter + time we've done this!"); 
+      console.log("Wheee! This is the", + counter + "time we've done this!"); 
      
         console.log("I'm looping,literally!");
-        counter += 1; 
+        counter = counter + 1; 
         
-        alert ("Slow down you will miss it");   
+        alert ("Slow down, you will miss it!");   
     }
     };
     
